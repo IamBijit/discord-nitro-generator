@@ -13,6 +13,7 @@
   "author": "Biswa",
   "license": "ISC",
   "dependencies": {
+    "colors": "^1.4.0",
     "dotenv": "^8.2.0",
     "figlet": "^1.5.0",
     "line-reader": "^0.4.0",
