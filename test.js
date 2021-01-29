@@ -16,17 +16,3 @@ const hookname = { "success": "Nitro Generator", "warn": "Nitro Validator" }
 //     .setText('**Found Valid Nitro!** \n https://discord.com/gifts/0D70P7mmCE0k3Aa3 ');
 // Hook.send(HookMsg);
 
-async function Addstuff(){
-    var fetchItem  = await eco.fetch('n000', 2);
-    if(!fetchItem){
-    eco.set(`n000`, `https://discord.com/gifts/0D70P7mmCE0k3Aa3`);
-    
-    }else{
-        console.log(fetchItem);
-        term.brightGreen(`Found Nitro! https://discord.gift/hdsfckj\n`);
-        Hook.success('Nitro Generator', `https://discord.com/gifts/0D70P7mmCE0k3Aa3`);
-        setTimeout(()=>{process.exit()}, 1200);
-    }
-
-}
-Addstuff();
