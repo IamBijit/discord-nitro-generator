@@ -124,6 +124,7 @@ checkCode = function (code) {
         }
     });
 }
+//this function is optional
 checkCodeOffline = function (code) {
     request(`https://discordapp.com/api/v6/entitlements/gift-codes/${code}?with_application=false&with_subscription_plan=true`, (error, res, body) => {
         if (error) {
@@ -167,59 +168,14 @@ checkCodeOffline = function (code) {
 }
 
 
-function main() {
+function loadGenerator() {
    
   
     term.brightYellow("'No' generator will continually log codes until manually stopped...\n");
     LogHook.warn(hookConfig.name, `Starting the generator [24/7] !`);
 
 
-    // term.red("No proxy detected...\n");
-    // var progressBar, progress = 0;
-    // function doProgress() {
-
-    //     progress += Math.random() / 10;
-    //     progressBar.update(progress);
-
-    //     if (progress >= 1) {
-
-    //         console.clear();
-    //         setTimeout(function () {
-
-    //             term.green("-------------------------------------\n");
-    //         }, 2000);
-    //         setTimeout(function () {
-    //             term.brightCyan(
-    //                 "||===== Generating Stuff ====|| \n"
-    //             );
-    //         }, 4000);
-
-
-    //         term.green("-------------------------------------\n");
-    //         term.green(`Discord nitro generator ${version} \n`);
-    //         term.green(`Checking a code every ${12 / triesPerSecond} second(s)\n`);
-
-    //         setTimeout(function () {
-
-    //             setInterval(() => {
-    //                 checkCodeOffline(generatecode());
-    //             }, (12 / triesPerSecond) * 1000);
-    //         }, 12000);
-
-    //     } else {
-    //         setTimeout(doProgress, 100 + Math.random() * 400);
-    //     }
-    // }
-
-
-    // progressBar = term.progressBar({
-    //     width: 80,
-    //     title: "Starting generator....",
-    //     eta: true,
-    //     percent: true
-    // });
-
-    // doProgress();
+    
 // ======== Defferent Area ====== 
 
 var progressBar, progress = 0;
@@ -273,7 +229,7 @@ doProgress();
 
 }
 
-main()
+loadGenerator()
 process.on('uncaughtException', function (err) {
     LogHook.err(hookConfig.name, `An error occurred ${err}`);
     term.gray("An error occurred:\n");
