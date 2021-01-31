@@ -10,9 +10,12 @@ Discord Nitro Generator and Validator Built with Nodejs
 - `npm start`
 
 ## .env configuration
--`access ="web_hook_url`
--`logaccess="another_web_hook_url"`
--`Mongodb="mongo_db_url"`
+
+>`access ="web_hook_url`
+
+>`logaccess="another_web_hook_url"`
+
+>`Mongodb="mongo_db_url"`
 
 ## Check the generator
 [Discord Server Link](https://discord.gg/YXeJErmPZs)
